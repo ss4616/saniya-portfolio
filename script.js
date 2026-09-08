@@ -1,0 +1,1 @@
+document.getElementById('print').addEventListener('click', () => { const panels = [...document.querySelectorAll('details')]; const states = panels.map(panel => panel.open); panels.forEach(panel => panel.open = true); window.addEventListener('afterprint', () => panels.forEach((panel, index) => panel.open = states[index]), {once: true}); window.print(); });
