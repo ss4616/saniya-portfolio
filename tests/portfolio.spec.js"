@@ -1,0 +1,6 @@
+const {test,expect}=require('@playwright/test');
+const {validateCases}=require('../case-schema');
+const cases=validateCases(require('../cases.json'));
+for(const c of cases){test(c.id+' — '+c.title,async({page})=>{await page.goto(c.path);const target=page.locator(c.selector);if(c.assertion==='visible')await expect(target).toBeVisible();if(c.assertion==='text')await expect(target).toContainText(c.expected);if(c.assertion==='href')await expect(target).toHaveAttribute('href',c.expected);if(c.assertion==='count')await expect(target).toHaveCount(Number(c.expected));});}
+test('Mobile navigation reaches projects without horizontal overflow',async({page})=>{await page.setViewportSize({width:390,height:844});await page.goto('/');await page.locator('nav a[href="#projects"]').click();await expect(page).toHaveURL(/#projects$/);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);});
+test('Project notes open and close',async({page})=>{await page.goto('/');const panel=page.locator('details').first();await panel.locator('summary').click();await expect(panel).toHaveAttribute('open','');await expect(panel.locator('.case-notes')).toBeVisible();await panel.locator('summary').click();await expect(panel).not.toHaveAttribute('open','');});
