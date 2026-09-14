@@ -1,0 +1,2 @@
+const fs=require('node:fs');
+class Reporter{constructor(){this.tests=[];}onTestEnd(test,result){this.tests.push({title:test.title,status:result.status,duration:result.duration,error:result.errors?.map(e=>e.message||'').join('\n').replace(/\u001b\[[0-9;]*m/g,'').slice(0,2000)||null});}onEnd(result){fs.mkdirSync('qa-results',{recursive:true});fs.writeFileSync('qa-results/latest.json',JSON.stringify({generatedAt:new Date().toISOString(),commit:process.env.GITHUB_SHA||'local',status:result.status,duration:result.duration,tests:this.tests},null,2));}}module.exports=Reporter;
