@@ -1,0 +1,6 @@
+[
+  {"id":"QA-001","title":"Profile name is visible","path":"/","selector":"h1","assertion":"text","expected":"Saniya Saad"},
+  {"id":"QA-002","title":"Contact email opens an email draft","path":"/","selector":".contact-email","assertion":"href","expected":"mailto:saniya.saad@hotmail.com"},
+  {"id":"QA-003","title":"Projects section is available","path":"/","selector":"#projects","assertion":"visible","expected":""},
+  {"id":"QA-004","title":"Testing workspace opens","path":"/qa-suite.html","selector":"h1","assertion":"text","expected":"Quality, in practice"}
+]
