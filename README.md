@@ -1,6 +1,6 @@
 # Saniya Saad — Portfolio
 
-An original midnight-blue and ivory portfolio, organized into introduction, about, experience, skills, projects, and contact sections. Structure inspired by https://ella79.github.io/portfolio/; implementation, styling, and copy are original to this portfolio. No reference code or assets have been reused.
+An original midnight-blue and ivory portfolio, organized into introduction, about, experience, skills, projects, and contact sections. 
 
 ## Preview
 
@@ -8,7 +8,7 @@ Extract this ZIP and open index.html in a browser. No installation is needed.
 
 ## Update GitHub Pages
 
-Upload the extracted files to the root of ss4616/saniya-portfolio and commit to main. Replace the previous index.html, style.css, script.js, favicon.svg, and README.md. Retain .nojekyll.
+Upload the extracted files to the root of ss4616/saniya-portfolio and commit to main. 
 
 If Pages is not enabled, open Settings → Pages and select Deploy from a branch → main → /(root), then Save. If already enabled, committing the updated files starts the next deployment.
 
@@ -20,7 +20,7 @@ If Pages is not enabled, open Settings → Pages and select Deploy from a branch
 
 The PDF button prints the portfolio; it is not a resume download. Employment dates, metrics, and certifications are not invented. Automation is described as hands-on exploration, not production ownership. Fonts use Google Fonts with system fallbacks.
 
-## QA workspace (new)
+## QA workspace 
 
 Open `qa-suite.html` through a web server or on GitHub Pages. Starter assertions live in `cases.json`. The editor saves drafts only in your browser. Export the draft and replace the repository-root `cases.json` to make it part of the next run. No browser draft is uploaded automatically, and anonymous visitors cannot dispatch runs.
 
