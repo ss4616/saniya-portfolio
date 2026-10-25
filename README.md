@@ -1,6 +1,6 @@
-# Saniya Saad — Portfolio
+# Saniya Saad Portfolio
 
-An original midnight-blue and ivory portfolio, organized into introduction, about, experience, skills, projects, and contact sections. 
+A portfolio organized into introduction, about, experience, skills, projects, and contact sections. 
 
 ## Preview
 
